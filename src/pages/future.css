@@ -1,0 +1,43 @@
+.future-page {
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000;
+  background-image: url('../assets/cyberbg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #FFF;
+  font-family: 'Courier New', monospace;
+  text-align: center;
+}
+
+.container {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.text {
+  font-size: 1.3rem; /* Smaller font size (was 1.5rem) */
+  word-break: break-word;
+  opacity: 1;
+  transition: opacity 1s ease-in-out;
+  min-height: 2rem;
+  text-align: center;
+  max-width: 1100px; /* Much larger width (was 800px) */
+  line-height: 1.6;
+}
+
+.fade-out {
+  opacity: 0;
+}

@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap');
+
+.motion-human-page * {
+    margin: 0;
+    padding: 0;
+    font-family: "Silkscreen", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.motion-human-page {
+    background: #000;
+    min-height: 2000px;
+    width: 100%;
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+/* Override global scrollbar hiding and show custom scrollbar for MotionHuman page */
+.motion-human-page::-webkit-scrollbar {
+    display: block;
+    width: 12px;
+}
+
+.motion-human-page::-webkit-scrollbar-track {
+    background: #000;
+    border: 1px solid #333;
+}
+
+.motion-human-page::-webkit-scrollbar-thumb {
+    background: linear-gradient(45deg, #00ffff, #0080ff);
+    border: 1px solid #00ffff;
+    border-radius: 0;
+    box-shadow: 
+        0 0 5px #00ffff,
+        inset 0 0 5px rgba(0, 255, 255, 0.3);
+}
+
+.motion-human-page::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(45deg, #00cccc, #0066cc);
+    box-shadow: 
+        0 0 10px #00ffff,
+        inset 0 0 10px rgba(0, 255, 255, 0.5);
+}
+
+.motion-human-page::-webkit-scrollbar-corner {
+    background: #000;
+}
+
+/* Firefox scrollbar styling - only for MotionHuman page */
+.motion-human-page {
+    scrollbar-width: thin;
+    scrollbar-color: #00ffff #000;
+    -ms-overflow-style: auto; /* Override IE hiding */
+}
+
+.motion-human-page body {
+    background: #000;
+}
+
+.motion-human-page section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: visible;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.motion-human-page section::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 300px;
+    background: linear-gradient(to top, #000000, transparent);
+    z-index: 10000;
+}
+
+.motion-human-page section img#robo {
+    width: 40%;
+    height: auto;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -20%);
+    transform-origin: bottom;
+    pointer-events: none; 
+}
+
+.motion-human-page section img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    pointer-events: none;
+}
+
+.motion-human-page section img#drone1 {
+    position: absolute;
+    top: 10%;      
+    left: 15%;     
+    width: 200px; 
+    height: auto; 
+    pointer-events: none;
+}
+
+.motion-human-page section img#drone2 {
+    position: absolute;
+    top: 10%;      
+    left: 60%;    
+    width: 200px;  
+    height: auto;  
+    pointer-events: none;
+}
+
+.motion-human-page section img#ladoA {
+    width: 100%;
+    height: auto;
+    top: 50%;
+    left: 30%;
+    transform: translate(-35%, -45%);
+    transform-origin: bottom;
+    pointer-events: none;
+}
+
+.motion-human-page section img#ladoB {
+    width: 100%;
+    height: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-35%, -45%);
+    transform-origin: bottom;
+    pointer-events: none;
+}
+
+.motion-human-page .container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 5rem 2rem 50px 2rem;
+  min-height: 200vh;
+  position: relative;
+  z-index: 10;
+  background: #000000;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.motion-human-page .text-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+  margin: 15rem 0 5rem 0;
+  width: 100%;
+  min-height: 400px;
+}
+
+.motion-human-page .split {
+  opacity: 1;
+  font-size: 2.2rem;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  line-height: 1.2;
+  position: relative;
+  z-index: 1;
+  font-family: "Courier New", monospace;
+  font-weight: bold;
+  margin: 0;
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  text-shadow: 
+    0 0 10px rgba(0, 0, 0, 0.8),
+    0 0 20px rgba(0, 0, 0, 0.6),
+    0 0 30px rgba(0, 0, 0, 0.4),
+    2px 2px 4px rgba(0, 0, 0, 0.9);
+}
+
+.motion-human-page .left-text {
+  text-align: left;
+  align-self: flex-start;
+  margin-left: 40px;
+}
+
+.motion-human-page .right-text {
+  text-align: right;
+  align-self: flex-end;
+  margin-top: 30rem;
+  margin-right: 40px;
+}
+
+.motion-human-page .split span {
+  display: inline-block; 
+  will-change: transform;
+}
+
+.motion-human-page .text {
+  font-size: 2.2rem;
+  color: #fff;
+  text-align: center;  
+  margin: 10rem auto 5rem auto; 
+  max-width: 80%;      
+  position: relative;
+  z-index: 1;
+  font-family: "Courier New", monospace;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  clear: both;
+}
+
+.motion-human-page .motion-start-button {
+  display: block;
+  margin: 2rem auto 10rem auto;
+  width: 420px;
+  height: 120px;
+  cursor: pointer;
+  transition: 0.3s all ease;
+  position: relative;
+  z-index: 0;
+}
+
+.motion-human-page .spacer {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  z-index: 5;
+}

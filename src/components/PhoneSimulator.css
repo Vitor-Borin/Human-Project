@@ -1,0 +1,372 @@
+.phone-simulator-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3000;
+}
+
+.phone-simulator-container {
+  width: 322px;
+  height: 650px;
+  background-color: #000;
+  border-radius: 60px;
+  border: 2px solid #333;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
+}
+
+/* Phone frame overlay - outside the modal */
+.phone-frame {
+  position: absolute;
+  top: 49%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 390px;
+  height: 680px;
+  object-fit: contain;
+  pointer-events: none;
+  z-index: 3001;
+}
+
+/* Header Styles */
+.phone-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 20px;
+  background-color: #000;
+  border-bottom: 1px solid #333;
+  margin-top: 20px;
+}
+
+.phone-header-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.phone-header-left h2 {
+  color: white;
+  font-family: 'Courier New', monospace;
+  font-size: 20px;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.phone-header-right {
+  color: white;
+  font-family: 'Courier New', monospace;
+  font-size: 20px;
+}
+
+.phone-back-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.phone-back-btn img {
+  width: 40px;
+  height: 40px;
+}
+
+/* Chat List Styles */
+.phone-chat-list {
+  flex: 1;
+  overflow-y: auto;
+  background-color: #000;
+}
+
+.phone-chat-item {
+  display: flex;
+  align-items: center;
+  padding: 15px 20px;
+  border-bottom: 1px solid #222;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  gap: 15px;
+}
+
+.phone-chat-item:hover {
+  background-color: #1a1a1a;
+}
+
+.phone-chat-avatar {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.phone-chat-avatar img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.phone-new-message {
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.phone-new-message-small {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.phone-chat-info {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.phone-chat-name {
+  color: white;
+  font-family: 'Courier New', monospace;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+}
+
+.phone-chat-preview {
+  color: #ccc;
+  font-family: 'Courier New', monospace;
+  font-size: 14px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.phone-chat-actions {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.phone-call-icon {
+  width: 25px;
+  height: 25px;
+  margin-right: 10px;
+}
+
+/* Conversation View Styles */
+.phone-conversation-view {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.phone-conversation-header {
+  display: flex;
+  align-items: center;
+  padding: 15px 5px;
+  background-color: #000;
+  border-bottom: 1px solid #333;
+  margin-top: 20px;
+}
+
+.phone-conversation-avatar {
+  margin: 0 15px;
+}
+
+.phone-conversation-avatar img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.phone-conversation-info {
+  flex: 1;
+  display: flex;
+  align-items: flex-start;
+
+}
+
+.phone-conversation-name {
+  color: white;
+  font-family: 'Courier New', monospace;
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.phone-conversation-actions {
+  display: flex;
+  align-items: center;
+}
+
+/* Messages Styles */
+.phone-messages {
+  flex: 1;
+  padding: 20px;
+  overflow-y: hidden;
+  background-color: #000;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.phone-message {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.phone-message-received {
+  justify-content: flex-start;
+}
+
+.phone-message-sent {
+  justify-content: flex-end;
+}
+
+.phone-message-image {
+  max-width: 230px;
+  max-height: 150px;
+  border-radius: 10px;
+  object-fit: contain;
+}
+
+/* Specific styling for Amsg1.png */
+.phone-message-image[src*="Amsg1"] {
+  max-width: 150px;
+  max-height: 120px;
+}
+
+.phone-message-image[src*="Amsg2"] {
+  max-width: 250px;
+  max-height: 150px;
+}
+
+.phone-message-image[src*="Wmsg2"] {
+  max-width: 200px;
+  max-height: 150px;
+}
+
+.phone-message-image[src*="Wmsg3"] {
+  max-width: 150px;
+  max-height: 150px;
+}
+
+.phone-message-image[src*="VmsgAuto"] {
+  max-width: 210px;
+  max-height: 150px;
+}
+
+.helpmsg-image {
+  max-width: 200px !important;
+}
+
+/* Message Input Styles */
+.phone-message-input {
+  padding: 20px;
+  background-color: #1a1a1a;
+  border-top: 1px solid #333;
+  position: relative;
+  min-height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.phone-button-wrapper {
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.phone-send-button {
+  width: 100%;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  border-radius: 10px;
+  transition: all 0.2s;
+  position: relative;
+  outline: none;
+  box-shadow: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+/* Soft white glow for askBtn image */
+.phone-send-button img[src*="askBtn"] {
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 35px;
+}
+
+/* Remove grey background for askBtn button */
+.phone-send-button:has(img[src*="askBtn"]):hover {
+  background-color: transparent !important;
+}
+
+.phone-send-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.phone-button-image {
+  width: 100%;
+  max-width: 250px;
+  height: auto;
+  object-fit: contain;
+}
+
+.phone-finish-image {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* Locked chat item styles */
+.phone-chat-locked {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.phone-chat-locked .phone-chat-name {
+  color: #666;
+}
+
+.phone-chat-locked .phone-chat-preview {
+  color: #888;
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 400px) {
+  .phone-simulator-container {
+    width: 90%;
+    height: 90%;
+  }
+}

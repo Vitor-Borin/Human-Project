@@ -1,0 +1,31 @@
+.interaction-container {
+  background-color: #000;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  opacity: 0;
+  transition: opacity 1.5s ease-in;
+}
+
+.interaction-container.fade-in {
+  opacity: 1;
+}
+
+.interaction-container.fade-out {
+  opacity: 0;
+  transition: opacity 2s ease-out;
+}
+
+.interaction-chat-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  overflow: hidden;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}

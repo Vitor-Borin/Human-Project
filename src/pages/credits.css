@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap');
+
+.credits-page {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #000000;
+  overflow: hidden;
+  font-family: "Silkscreen", monospace;
+  color: #ffffff;
+  z-index: 1;
+}
+
+.credits-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.credits-content {
+  position: absolute;
+  top: 100vh;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  line-height: 2;
+  animation: scrollUp 120s linear forwards;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.credits-line {
+  font-size: 1.2rem;
+  margin: 20px 0;
+  color: #FFF;
+}
+
+.credits-line.title {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #FFF;
+  margin: 60px 0;
+}
+
+.credits-line.game-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #FFF;
+  margin: 40px 0;
+}
+
+.credits-line.spacing {
+  margin: 30px 0;
+}
+
+/* Character images in credits */
+.character-image {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin: 10px;
+}
+
+
+/* Animations */
+@keyframes scrollUp {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-1200vh);
+  }
+}
+
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .credits-container {
+    width: 80%;
+  }
+  
+  .character-left,
+  .character-right {
+    width: 100px;
+  }
+  
+  .character-left {
+    left: 20px;
+  }
+  
+  .character-right {
+    right: 20px;
+  }
+  
+  .character-image {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .credits-line {
+    font-size: 1rem;
+  }
+  
+  .credits-line.title {
+    font-size: 2rem;
+  }
+  
+  .credits-line.game-title {
+    font-size: 1.8rem;
+  }
+}
