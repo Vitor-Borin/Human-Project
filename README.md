@@ -146,6 +146,6 @@ Este projeto está sob a licença MIT. Veja o arquivo `LICENSE` para mais detalh
 
 **🌟 Se este projeto te ajudou, considere dar uma estrela! 🌟**
 
-[![GitHub stars](https://img.shields.io/github/stars/seu-usuario/human-exe?style=social)]([https://github.com/Vitor-Borin/Human-Project])
+[![GitHub stars](https://img.shields.io/github/stars/Vitor-Borin/Human-Project?style=social)]
 
 </div>
